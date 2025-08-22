@@ -13,3 +13,8 @@
 - `git checkout <commit>`: Switch to a specific commit
 - `git merge <branch>`: Merge changes from one branch into another
 - `git branch`: List all branches
+
+1- create a new branch named html-intro
+2- switch to the new branch
+3- copy the folder starter template
+4- make some in the files
