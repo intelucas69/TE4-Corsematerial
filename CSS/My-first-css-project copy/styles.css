@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: goldenrod;
+  color: silver;
+  display: flex;
+  padding: 20px;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav a {
+  color: silver;
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: darkgoldenrod;
+}
+
+section:first-of-type {
+  background-color: lightgray;
+  padding: 20px;
+  height: 10vh;
+}
+button {
+  background-color: darkgoldenrod;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+section:nth-of-type(2) {
+  background-color: darkgray;
+  padding: 20px;
+  height: 100vh;
+}
+
+section:nth-of-type(3) {
+  background-color: gray;
+  padding: 20px;
+  height: 100vh;
+}
+section:nth-of-type(4) {
+  background-color: dimgray;
+  padding: 20px;
+  height: 100vh;
+}
