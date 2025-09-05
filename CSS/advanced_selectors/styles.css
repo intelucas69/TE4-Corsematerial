@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#main-title {
+  color: green;
+}
+
+li,
+p {
+  color: darkslategray;
+  font-size: 18px;
+}
+
+.animals > ul > li {
+  list-style-type: disc;
+  padding: 10px;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+.highlight {
+  border: 3px solid yellow;
+}
+h1 + p {
+  font-style: italic;
+}
+li:nth-child(even) {
+  background-color: lightgray;
+}
+footer > p {
+  border: 2px solid red;
+}
+.animals ul:first-of-type > li::before {
+  content: "🐒 ";
+  padding: 10px;
+}
