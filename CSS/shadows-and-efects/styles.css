@@ -3,19 +3,24 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: antiquewhite;
 }
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+.card {
+  background-color: white;
+  padding: 7px;
+  margin: 50px auto;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
 }
-
-button:hover {
-  background-color: #0056b3;
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  filter: blur(400px);
+  padding: 2px;
+}
+.card img:hover {
+  filter: blur(0);
+  transition: filter 0.3s ease-in-out;
 }
