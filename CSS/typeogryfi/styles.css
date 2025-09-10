@@ -1,0 +1,39 @@
+:root {
+  --font-family: Epunda Slab, sans-serif;
+  --background-color: #f4f4f4;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+  --letter-spacing-base: 1px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.note {
+  font-style: italic;
+  letter-spacing: 1px;
+}
+p {
+  margin-bottom: 1rem;
+  font-family: Epunda Slab, sans-serif;
+}
