@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Google Sans Code";
+  src: url(./assets/fonts/Google_Sans_Code/GoogleSansCode-VariableFont_wght.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --font1: "Google Sans Code", sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+h1 {
+  font-family: var(--font1);
+  text-align: center;
+  margin: 20px 0;
+}
