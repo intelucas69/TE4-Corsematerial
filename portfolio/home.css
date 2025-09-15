@@ -2,6 +2,10 @@
   font-family: "Google Sans Code";
   src: url(./assets/fonts/Google_Sans_Code/GoogleSansCode-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: "Epunda Slab";
+  src: url(./assets/fonts/Epunda_Slab/EpundaSlab-Italic-VariableFont_wght.ttf);
+}
 
 * {
   padding: 0;
@@ -10,6 +14,7 @@
 }
 :root {
   --font1: "Google Sans Code", sans-serif;
+  --font2: "Epunda Slab", serif;
 }
 
 body {
