@@ -9,6 +9,9 @@ const book = {
 book.publisher = "Snus Publishing";
 book.yearViral = 2027;
 console.log(book);
+for (const key in book) {
+  console.log(`${key}: ${book[key]}`);
+}
 
 // exercise 2
 const user = {
@@ -18,22 +21,24 @@ const user = {
 
 //exercise 3
 const classroom = {
-    teacher: "Franzcisziko",
-    students:{
-        student1:{
-            name: "Lars",
-            age: "19",
-        } 
-        student2:{
-            name: "Lucas",
-            age: "19"
-        } 
-        student1:{
-            name: "Peter",
-            age: "36"
-        } 
-        
-
-    }
+  teacher: "Franzcisziko",
+  students: {
+    student1: {
+      name: "Lars",
+      age: 19,
+    },
+    student2: {
+      name: "Lucas",
+      age: 19,
+    },
+    student3: {
+      name: "Peter",
+      age: 36,
+    },
+    student4: {
+      name: "david",
+      age: 12,
+    },
+  },
 };
 console.log(classroom);

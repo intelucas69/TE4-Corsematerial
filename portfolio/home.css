@@ -21,7 +21,7 @@ body {
   background-color: #f4f4f4;
 }
 
-h1 {
+.header {
   font-family: var(--font1);
   text-align: center;
   margin: 20px 0;
