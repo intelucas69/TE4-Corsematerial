@@ -1,37 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="author" content="Lucas" />
-    <meta property="og:title" content="My portfolio" />
-    <meta
-      property="og:description"
-      content="Welcome to my personal web dev portfolio!"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Portfolio home</title>
+    <title>Contact — Lucas</title>
+    <meta property="og:title" content="Lucas — Contact" />
+    <meta property="og:description" content="Contact Lucas" />
+    <link rel="stylesheet" href="./home.css" />
+    <!--<link rel="stylesheet" href="./contact-me.css" />-->
   </head>
   <body>
-    <div class="header">
-      <h1>My Portfolio</h1>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="brand">
+        <h1>Lucas — Web Developer</h1>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 0.5rem">
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          ☰ Menu
+        </button>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-pressed="false"
+          aria-label="Toggle dark mode"
+        >
+          🌙
+        </button>
+      </div>
+
+      <nav id="site-nav" class="top-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./about-me.html">About Me</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact-me.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <aside class="left-sidebar" aria-label="Contact info">
+        <h2 class="sidebar-title">Contact</h2>
+        <p style="color: var(--muted); margin: 0">
+          Prefer email?<br />
+          <a href="mailto:lucas.norback123@outlook.com"
+            >lucas.norback123@outlook.com</a
+          >
+        </p>
+        <p style="margin-top: 0.8rem; color: var(--muted)">
+          Or use the form — I typically reply within a few business days.
+        </p>
+        <div style="margin-top: 1rem; font-size: 0.95rem; color: var(--muted)">
+          <strong>Location:</strong> Sweden<br />
+          <strong>Availability:</strong> Freelance & collaborations
+        </div>
+      </aside>
+
+      <main id="main" class="main" tabindex="-1">
+        <section class="hero reveal-on-scroll" style="padding: 1.25rem">
+          <div class="hero-copy" style="width: 100%">
+            <h2>Say hello</h2>
+            <p class="lead">
+              Fill in your details and a short message — I'll get back to you
+              soon.
+            </p>
+
+            <form
+              id="contact-form"
+              aria-label="Contact form"
+              action="#"
+              method="post"
+              novalidate
+            >
+              <label style="display: block; margin-bottom: 0.6rem">
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                  required
+                  aria-required="true"
+                />
+              </label>
+
+              <label style="display: block; margin-bottom: 0.6rem">
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="you@domain.com"
+                  required
+                  aria-required="true"
+                />
+              </label>
+
+              <label style="display: block; margin-bottom: 0.6rem">
+                <textarea
+                  name="message"
+                  rows="6"
+                  placeholder="Tell me about your project..."
+                  required
+                  aria-required="true"
+                ></textarea>
+              </label>
+
+              <!-- simple honeypot for spam bots -->
+              <input
+                type="text"
+                name="_hp"
+                tabindex="-1"
+                style="position: absolute; left: -9999px; opacity: 0"
+              />
+
+              <div
+                style="
+                  display: flex;
+                  gap: 0.6rem;
+                  align-items: center;
+                  margin-top: 0.5rem;
+                "
+              >
+                <button type="submit" class="cta">Send message</button>
+                <div
+                  id="form-status"
+                  aria-live="polite"
+                  style="color: var(--muted)"
+                ></div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
     </div>
 
-    <main class="main">
-      <h2>My name</h2>
-    </main>
-    <aside class="sidebar">
-      <header>Menu</header>
-      <nav>
-        <li><a href="./home.html">Home</a></li>
-        <li><a href="./about-me.html">About Me</a></li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./contact-me.html">Contact Me</a></li>
-      </nav>
-    </aside>
-    <footer>
-      <p>© 2024 My Portfolio</p>
+    <footer class="site-footer">
+      <p>© 2025 Lucas — Web Developer</p>
+      <p class="footer-links">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        ·
+        <a href="https://linkedin.com/" target="_blank" rel="noopener"
+          >LinkedIn</a
+        >
+      </p>
     </footer>
-    <script src="script.js"></script>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script src="./script.js"></script>
   </body>
 </html>

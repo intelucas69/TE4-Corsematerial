@@ -1,37 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="author" content="Lucas" />
-    <meta property="og:title" content="My portfolio" />
-    <meta
-      property="og:description"
-      content="Welcome to my personal web dev portfolio!"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Portfolio home</title>
+    <title>Projects — Lucas</title>
+    <meta property="og:title" content="Lucas — Projects" />
+    <meta property="og:description" content="Selected projects by Lucas" />
+    <link rel="stylesheet" href="./home.css" />
   </head>
   <body>
-    <div class="header">
-      <h1>My Portfolio</h1>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="brand">
+        <h1>Lucas — Web Developer</h1>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 0.5rem">
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          ☰ Menu
+        </button>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-pressed="false"
+          aria-label="Toggle dark mode"
+        >
+          🌙
+        </button>
+      </div>
+
+      <nav id="site-nav" class="top-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./about-me.html">About Me</a></li>
+          <li><a href="./projects.html" aria-current="page">Projects</a></li>
+          <li><a href="./contact-me.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <aside class="left-sidebar" aria-label="Project navigation">
+        <h2 class="sidebar-title">Projects</h2>
+        <p style="margin: 0 0 0.75rem 0; color: var(--muted)">
+          Jump to a project below or open one to view details.
+        </p>
+        <nav>
+          <ul>
+            <li><a href="#project-a">Responsive App</a></li>
+            <li><a href="#project-b">Interactive UI</a></li>
+            <li><a href="#project-c">API Service</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main id="main" class="main" tabindex="-1">
+        <section
+          class="features reveal-on-scroll"
+          aria-label="Featured projects"
+        >
+          <h3>Featured projects</h3>
+          <p class="lead" style="margin-bottom: 1rem">
+            A small selection of projects — cards are rendered dynamically from
+            script.js.
+          </p>
+
+          <!-- script.js will render project cards into this container -->
+          <div class="cards" id="projects-list" aria-live="polite">
+            <!-- rendered by script.js from projects array -->
+          </div>
+        </section>
+
+        <section
+          class="contact-cta reveal-on-scroll"
+          style="margin-top: 1.5rem"
+        >
+          <h3>Want more?</h3>
+          <p>
+            I can share case studies, live demos and source code on request.
+            <a href="./contact-me.html">Contact me</a>.
+          </p>
+        </section>
+      </main>
     </div>
 
-    <main class="main">
-      <h2>My name</h2>
-    </main>
-    <aside class="sidebar">
-      <header>Menu</header>
-      <nav>
-        <li><a href="./home.html">Home</a></li>
-        <li><a href="./about-me.html">About Me</a></li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./contact-me.html">Contact Me</a></li>
-      </nav>
-    </aside>
-    <footer>
-      <p>© 2024 My Portfolio</p>
+    <footer class="site-footer">
+      <p>© 2025 Lucas — Web Developer</p>
+      <p class="footer-links">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        ·
+        <a href="https://linkedin.com/" target="_blank" rel="noopener"
+          >LinkedIn</a
+        >
+      </p>
     </footer>
-    <script src="script.js"></script>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -1,37 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="author" content="Lucas" />
-    <meta property="og:title" content="My portfolio" />
-    <meta
-      property="og:description"
-      content="Welcome to my personal web dev portfolio!"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Portfolio home</title>
+    <title>About — Lucas</title>
+    <meta property="og:title" content="Lucas — About" />
+    <meta property="og:description" content="About Lucas — web developer" />
+    <link rel="stylesheet" href="./home.css" />
+    <!--<link rel="stylesheet" href="./about-me.css" />-->
   </head>
   <body>
-    <div class="header">
-      <h1>My Portfolio</h1>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="brand">
+        <h1>Lucas — Web Developer</h1>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 0.5rem">
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          ☰ Menu
+        </button>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-pressed="false"
+          aria-label="Toggle dark mode"
+        >
+          🌙
+        </button>
+      </div>
+
+      <nav id="site-nav" class="top-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./about-me.html" aria-current="page">About Me</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact-me.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <aside class="left-sidebar" aria-label="Main menu">
+        <h2 class="sidebar-title">Menu</h2>
+        <nav>
+          <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./contact-me.html">Contact</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main id="main" class="main" tabindex="-1">
+        <section class="hero reveal-on-scroll">
+          <div class="hero-copy">
+            <h2>Hi, I'm Lucas</h2>
+            <p class="lead">
+              I'm a web developer focused on building accessible, responsive
+              interfaces and lightweight front-end experiences. I enjoy clean
+              design, performance and learning new tools.
+            </p>
+
+            <p>Location: Sweden · Available for freelance & collaboration</p>
+            <p>
+              <a class="cta" href="./contact-me.html">Get in touch →</a>
+            </p>
+          </div>
+
+          <div class="hero-media">
+            <img
+              class="responsive"
+              src="./assets/images/me.jpg"
+              alt="Photo of Lucas"
+            />
+          </div>
+        </section>
+
+        <section class="features reveal-on-scroll" aria-label="Skills">
+          <h3>Skills</h3>
+          <div class="cards">
+            <article class="card">
+              <h4>Front-end</h4>
+              <p>
+                HTML, CSS, modern JavaScript, accessibility, responsive layouts
+              </p>
+            </article>
+
+            <article class="card">
+              <h4>Back-end</h4>
+              <p>Node.js, REST APIs, small services, working with databases</p>
+            </article>
+
+            <article class="card">
+              <h4>Tooling</h4>
+              <p>Git, Webpack/Vite, testing, CI, deployment basics</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact-cta reveal-on-scroll">
+          <h3>Work with me</h3>
+          <p>
+            I'm open to short projects and long-term collaborations. For project
+            inquiries, timelines and rates,
+            <a href="./contact-me.html">contact me</a>.
+          </p>
+        </section>
+      </main>
     </div>
 
-    <main class="main">
-      <h2>My name</h2>
-    </main>
-    <aside class="sidebar">
-      <header>Menu</header>
-      <nav>
-        <li><a href="./home.html">Home</a></li>
-        <li><a href="./about-me.html">About Me</a></li>
-        <li><a href="./projects.html">Projects</a></li>
-        <li><a href="./contact-me.html">Contact Me</a></li>
-      </nav>
-    </aside>
-    <footer>
-      <p>© 2024 My Portfolio</p>
+    <footer class="site-footer">
+      <p>© 2025 Lucas — Web Developer</p>
+      <p class="footer-links">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        ·
+        <a href="https://linkedin.com/" target="_blank" rel="noopener"
+          >LinkedIn</a
+        >
+      </p>
     </footer>
-    <script src="script.js"></script>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script src="./script.js"></script>
   </body>
 </html>
